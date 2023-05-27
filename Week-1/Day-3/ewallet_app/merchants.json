@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "6471abd6cd53d0c17bd8e8ee"
+  },
+  "companyName": "Space X",
+  "companyEmail": "spacex@space.com",
+  "phoneNumber": "0123456789",
+  "transactions": [
+    {
+      "timestamp": {
+        "$timestamp": {
+          "t": 0,
+          "i": 0
+        }
+      },
+      "amount": 500,
+      "remarks": "Paid using QR"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6471ac59cd53d0c17bd8e8f1"
+  },
+  "companyName": "Amazon",
+  "companyEmail": "amazon@amazon.com",
+  "phoneNumber": "0123456789"
+}]

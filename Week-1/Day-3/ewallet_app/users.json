@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "6471aabbcd53d0c17bd8e8eb"
+  },
+  "name": "John Doe",
+  "email": "johndoe@jdoe.co",
+  "phoneNumber": "0123456789",
+  "transactions": [
+    {
+      "type": "add",
+      "timestamp": {
+        "$timestamp": {
+          "t": 0,
+          "i": 0
+        }
+      },
+      "amount": 6000.56
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6471ab52cd53d0c17bd8e8ec"
+  },
+  "name": "Jane Doe",
+  "email": "janedoe@jdoe.co",
+  "phoneNumber": "0123456789",
+  "age": 30,
+  "transactions": [
+    {
+      "type": "deduct",
+      "timestamp": {
+        "$timestamp": {
+          "t": 0,
+          "i": 0
+        }
+      },
+      "amount": 100
+    }
+  ]
+}]
