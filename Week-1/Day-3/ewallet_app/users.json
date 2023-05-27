@@ -1,6 +1,6 @@
 [{
   "_id": {
-    "$oid": "6471aabbcd53d0c17bd8e8eb"
+    "$oid": "647240af7004c601da9bc62e"
   },
   "name": "John Doe",
   "email": "johndoe@jdoe.co",
@@ -14,12 +14,12 @@
           "i": 0
         }
       },
-      "amount": 6000.56
+      "amount": 1000.56
     }
   ]
 },{
   "_id": {
-    "$oid": "6471ab52cd53d0c17bd8e8ec"
+    "$oid": "647240f77004c601da9bc62f"
   },
   "name": "Jane Doe",
   "email": "janedoe@jdoe.co",

@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "647243dd7004c601da9bc635"
+  },
+  "amount": 100,
+  "timestamp": {
+    "$timestamp": {
+      "t": 1685210116,
+      "i": 1
+    }
+  },
+  "merchantObjectId": {
+    "$oid": "647243097004c601da9bc631"
+  }
+}]
