@@ -61,8 +61,16 @@
 
 - Mentor Sharing Topic & Demo: Introduction to REST APIs and CRUD operations
 - Topics To Be Self-Covered: Creating an Express.js app, defining routes, handling requests and responses
-- Task Of The Day: Build a simple REST API that performs CRUD operations for todolist
-- Take Home Tasks: Add a new route that will return the total count of todos and another route that filters for the pending todo
+- Task Of The Day: Build a simple REST API that performs CRUD operations for a todolist
+  - Retrieve a list of all todos
+  - Retrieve a single todo
+  - Create a new todo
+  - Update an existing todo
+  - Delete a todo
+
+- Take Home Tasks: 
+  - Create a new route that retrieves the total count of todos and sends it as a response.
+  - Create a route that filters the todos based on their status (e.g., pending) and returns the filtered list.
 
 **Day 2**:
 
