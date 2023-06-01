@@ -13,17 +13,17 @@
 **Day 2**:
 
 - Mentor Sharing Topic & Demo: Introduction to databases and SQL
-- Topics To Be Self-Covered: 
-	- Installing MySQL
-	- Basic usage of MySQL
-	- Installing Beekeeper Studio
-	- Basics syntax of SQL
-		- Creating tables
-		- Inserting data
-		- Reading data
-		- Updating data
-		- Deleting data
-	- Creating and querying a database using SQL
+- Topics To Be Self-Covered:
+  - Installing MySQL
+  - Basic usage of MySQL
+  - Installing Beekeeper Studio
+  - Basics syntax of SQL
+    - Creating tables
+    - Inserting data
+    - Reading data
+    - Updating data
+    - Deleting data
+  - Creating and querying a database using SQL
 - Task Of The Day: Create ERD diagram for the todoapp with lucidchart or miro or on whiteboard
 - Task Of The Day 2: Create the required entities and attributes for the following application:
   - You are asked to build a database for the car application
@@ -40,14 +40,14 @@
 
 - Mentor Sharing Topic & Demo: Introduction to NoSQL databases and MongoDB
 - Topics To Be Self-Covered:
-	- Installing MongoDB
-	- Explore document-oriented database
-	- Using MongoDB Compass:
-		- Creating tables
-		- Inserting collections
-		- Reading collections
-		- Updating collections
-		- Deleting collections
+  - Installing MongoDB
+  - Explore document-oriented database
+  - Using MongoDB Compass:
+    - Creating tables
+    - Inserting collections
+    - Reading collections
+    - Updating collections
+    - Deleting collections
 - Task Of The Day: Create a database for a social media app in MongoDB. Here's the brief overview of the app:
   - Users information should contain their profile information such as their name, email, phone number, tags and so on. Tags should be an array of strings. Tags should contain/tell the user's preference.
   - Users can create/view/update/delete posts.
@@ -62,15 +62,20 @@
 - Mentor Sharing Topic & Demo: Introduction to REST APIs and CRUD operations
 - Topics To Be Self-Covered: Creating an Express.js app, defining routes, handling requests and responses
 - Task Of The Day: Build a simple REST API that performs CRUD operations for a todolist
-  - Retrieve a list of all todos
-  - Retrieve a single todo
-  - Create a new todo
-  - Update an existing todo
-  - Delete a todo
+  - Retrieve a list of all todos (GET /todos)
+  - Retrieve a single todo (GET /todos/:id)
+  - Create a new todo (POST /todos)
+  - Update an existing todo (PUT /todos/:id)
+  - Delete a todo (DELETE /todos/:id)
+  - Have at least 30 todos and implement pagination + sorting feature to GET /todos route
 
-- Take Home Tasks: 
+- Take Home Tasks:
   - Create a new route that retrieves the total count of todos and sends it as a response.
   - Create a route that filters the todos based on their status (e.g., pending) and returns the filtered list.
+  - Add validation to the POST /todos and PUT /todos/:id routes using middleware. You can use third party middleware or create from scratch.
+  - Add logging to all routes so that you can see the request body, path params, query params, time of the request and user-agent string (browser’s information).
+  - Self cover: [Debugging App with VS Code](https://app.sigmaschool.co/posts/csdp-backend-development-level-2b-debugging-app-with-vs-code)  
+  Up until What is an ORM?
 
 **Day 2**:
 

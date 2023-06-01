@@ -18,7 +18,7 @@ app.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    // Process the valid input
+    // Process the valid input. Save to database, etc.
     // ...
   }
 );
