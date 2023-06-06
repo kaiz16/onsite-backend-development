@@ -62,6 +62,7 @@
 - Mentor Sharing Topic & Demo: Introduction to REST APIs and CRUD operations
 - Topics To Be Self-Covered: Creating an Express.js app, defining routes, handling requests and responses
 - Task Of The Day: Build a simple REST API that performs CRUD operations for a todolist
+
   - Retrieve a list of all todos (GET /todos)
   - Retrieve a single todo (GET /todos/:id)
   - Create a new todo (POST /todos)
@@ -75,14 +76,18 @@
   - Add validation to the POST /todos and PUT /todos/:id routes using middleware. You can use third party middleware or create from scratch.
   - Add logging to all routes so that you can see the request body, path params, query params, time of the request and user-agent string (browser’s information).
   - Self cover: [Debugging App with VS Code](https://app.sigmaschool.co/posts/csdp-backend-development-level-2b-debugging-app-with-vs-code)  
-  Up until What is an ORM?
+    Up until What is an ORM?
 
 **Day 2**:
 
-- Mentor Sharing Topic & Demo: Integrating a database to the REST API
-- Topics To Be Self-Covered: Creating an Express.js app with database integrated, implementing MVC pattern, handling database errors.
-- Task Of The Day: Build a simple Todo REST API that performs CRUD operations on database - MySQL locally.
-- Take Home Tasks: Same as Day 1 but connected to database
+- Mentor Sharing Topic & Demo: Integrating a SQL Database to the REST API
+- Topics To Be Self-Covered: Creating an Express.js app with database integrated, implementing MVC pattern, using Sequelize ORM
+- Task Of The Day: Present an Insomnia Demo of the Practice Project
+- Take Home Tasks:
+  - Self cover: [Data Validation](https://app.sigmaschool.co/posts/csdp-backend-development-level-2b-data-validation)  
+    Up until the Capstone Project
+  - [Module Capstone Project ~ Create BookingApp](https://app.sigmaschool.co/posts/csdp-backend-development-level-2b-module-capstone-project-create-bookingapp)  
+    Use the Model-View-Controller (MVC) pattern when creating the BookingApp project.
 
 **Day 3**:
 
