@@ -91,10 +91,43 @@
 
 **Day 3**:
 
-- Mentor Sharing Topic & Demo: Introduction to serverless functions and gcloud function
-- Topics To Be Self-Covered: Creating and deploying a gcloud function
-- Task Of The Day: Explore gcloud and understand the benefit of a serverless function, understanding when to use it and when to not use it.
-- Take Home Tasks: Build a simple gcloud function that responds with random quote when called
+- Mentor Sharing Topic & Demo: Advanced ExpressJS - CORS, Environment Variables, Logging
+- Topics To Be Self-Covered: Revision MVC Pattern Module
+- Task Of The Day: Build a Task Management System
+
+  - Overview
+
+    - There are three user roles in the system: admin, manager, and employee.
+    - Projects have a name, description, start and expected end dates.
+    - Tasks belong to a project. Tasks have a name, description, status, and due date.
+    - Projects are assigned to managers by admins.
+    - Tasks can be assigned to employees by managers.
+
+  - Database Schema:  
+    **Goal**: Using Beekeeper Studio, come up with the database schema for a task management system.
+
+    - Figure out the entities involved in the System. Eg: users, tasks, projects, and user roles.
+    - Figure out the relationships between the entities. For instance, a user can have multiple tasks assigned to them, and a project can have multiple tasks associated with it.
+    - Define the attributes and data types for each entity.
+    - Hint: Draw out the ERD diagram first and then create the schema.
+
+  - Models:  
+    **Goal**: Create the Sequelize models for all entities in the database.
+
+    - Create a separate model file for each entity in the system, following the MVC pattern
+    - Show the relationships between the models. For example, a user may have a foreign key to reference their assigned tasks.
+
+  - MVC Pattern:  
+    **Goal**: Implement proper MVC pattern
+    - Keep in mind the Model-View-Controller (MVC) pattern while designing the database schema and models.
+    - The models should exactly represent the entities in the database schema.
+    - The views and controllers are not required for this task.
+    - Use environment variables to store the database credentials.
+    - Add logging using Morgan middleware to log all requests to the console. The log should include the request body, path params, query params, time of the request, and user-agent string (browser’s information).
+
+- Take Home Tasks:
+  - Implement the controllers and routes for the Task Management System.
+  - Implement validations where appropriate.
 
 ### Week 13: Auth & Deployment - Docker & GCP
 
