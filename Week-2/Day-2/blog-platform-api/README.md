@@ -8,7 +8,7 @@ This is a Blog Platform API application built using Node.js, Express.js, and Seq
 ├── config                       # Configuration files
 │   ├── db.config.js                # Database configuration
 ├── controllers                  # Controllers
-│   ├── blogs.controller.js         # Merchants controller
+│   ├── blogs.controller.js         # Blogs controller
 │   ├── comments.controller.js      # Comments controller
 │   └── users.controller.js         # Users controller
 ├── db                           # Database related files
