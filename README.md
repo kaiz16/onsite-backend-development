@@ -133,10 +133,22 @@
 
 **Day 1**:
 
-- Mentor Sharing Topic & Demo: Introduction to authentication and security, using Passport.js for authentication
+- Mentor Sharing Topic & Demo: Introduction to authentication and security, implementing auth in ExpressJS
 - Topics To Be Self-Covered: Implementing user authentication and authorization using Passport.js - i& understand how hashing works in the background
-- Task Of The Day: Add user authentication and authorization in week 12
-- Take Home Tasks: Add forgot password route
+- Task Of The Day: Implement the following features in the Task Management System:
+  - Add pagination to the all the GET endpoints that return an array of data.
+  - Add sorting to the all the GET endpoints that return an array of data.
+    - For users, sorting can be done by `name` and `createdAt` fields in ascending and descending order.
+    - For projects, sorting can be done by `title` and `createdAt` fields in ascending and descending order.
+    - For tasks, sorting can be done by `title` and `createdAt` fields in ascending and descending order.
+  - Hash the password field `/POST /users` endpoint and `/PUT /users/:id` endpoint.
+  - Add the following authorization rules:
+    - Employees can only view projects in which they are involved. This means access to specific tasks that are part of these projects and assigned to them. This applies to both `GET /projects` and `GET /projects/:id` endpoints.
+    - Employees can only view tasks that are assigned to them. This applies to both `GET /tasks` and `GET /tasks/:id` endpoints.
+    - Allow managers to delete users.
+- Take Home Tasks: Explore Mailgun's API and implement the following features:
+    - Send an email to the user when a new user is created.
+    - Implement password reset feature. When a user forgets their password, they can request a unique code to be sent to their email. The user can then use the code to reset their password.
 
 **Day 2**:
 
