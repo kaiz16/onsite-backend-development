@@ -29,7 +29,7 @@ router.put(
 router.delete(
   "/:id",
   verifyToken,
-  checkRole(["admin"]),
+  checkRole(["admin", "manager"]),
   usersController.deleteUser
 );
 

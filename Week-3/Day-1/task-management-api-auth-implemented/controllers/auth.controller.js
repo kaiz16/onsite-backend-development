@@ -4,6 +4,15 @@ const { hashPassword, comparePassword } = require("../utils/bcrypt.util.js");
 
 async function register(req, res) {
   try {
+    // Check if the user with the same email already exist
+    const userExist = await User.findOne({
+      where: {
+        email: req.body.email,
+      },
+    });
+
+    if (userExist) throw "User already exist.";
+
     // Create user using data from request body.
     // Request body must contain all required fields defined in User model.
     const hashedPassword = hashPassword(req.body.password);

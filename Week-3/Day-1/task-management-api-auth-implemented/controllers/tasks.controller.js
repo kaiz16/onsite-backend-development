@@ -2,8 +2,37 @@ const Task = require("../models/Task.js");
 
 async function getAllTasks(req, res) {
   try {
-    // Find all tasks.
-    const tasks = await Task.findAll();
+    const limit = parseInt(req.query.limit) || 10;
+    const offset = parseInt(req.query.offset) || 0;
+    const sortBy = req.query.sortBy || "created_at";
+    const sortOrder = req.query.sortOrder || "DESC";
+
+    // If user's role is employee, only return tasks assigned to the employee.
+    if (req.user.role === "employee") {
+      // Find all tasks assigned to the employee with limit, offset, sortBy, and sortOrder.
+      const tasks = await Task.findAll({
+        limit: limit,
+        offset: offset,
+        order: [
+          [sortBy, sortOrder],
+        ],
+        where: {
+          employeeId: parseInt(req.user.id),
+        },
+      });
+
+      // Send all tasks as response.
+      return res.json(tasks);
+    }
+
+    // Find all tasks with limit, offset, sortBy, and sortOrder.
+    const tasks = await Task.findAll({
+      limit: limit,
+      offset: offset,
+      order: [
+        [sortBy, sortOrder],
+      ],
+    });
 
     // Send all tasks as response.
     res.json(tasks);

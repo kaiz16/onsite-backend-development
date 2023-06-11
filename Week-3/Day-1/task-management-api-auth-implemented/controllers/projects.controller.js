@@ -1,9 +1,63 @@
 const Project = require("../models/Project.js");
+const Task = require("../models/Task.js");
+
+async function getAllProjectsByTaskIDs(req, res) {
+  try {
+    const limit = parseInt(req.query.limit) || 10;
+    const offset = parseInt(req.query.offset) || 0;
+    const sortBy = req.query.sortBy || "createdAt";
+    const sortOrder = req.query.sortOrder || "DESC";
+
+    // Get all tasks by employee id.
+    const tasks = await Task.findAll({
+      where: {
+        employeeId: parseInt(req.user.id),
+      },
+    });
+
+    // Get all project ids from tasks.
+    const projectIds = tasks.map((task) => task.projectId);
+
+    // Find all projects with limit, offset, sortBy, and sortOrder.
+    const projects = await Project.findAll({
+      limit: limit,
+      offset: offset,
+      order: [
+        [sortBy, sortOrder],
+      ],
+      where: {
+        id: projectIds,
+      },
+    });
+
+    // Send all projects as response.
+    res.json(projects);
+  } catch (error) {
+    // If there is any error, send error as response.
+    res.status(500).json({ error: error });
+  }
+}
 
 async function getAllProjects(req, res) {
   try {
-    // Find all projects.
-    const projects = await Project.findAll();
+    const limit = parseInt(req.query.limit) || 10;
+    const offset = parseInt(req.query.offset) || 0;
+    const sortBy = req.query.sortBy || "created_at";
+    const sortOrder = req.query.sortOrder || "DESC";
+
+    // If user's role is employee, redirect to getAllProjectsByTaskIDs.
+    if (req.user.role === "employee") {
+      return getAllProjectsByTaskIDs(req, res);
+    }
+
+    // Find all projects with limit, offset, sortBy, and sortOrder.
+    const projects = await Project.findAll({
+      limit: limit,
+      offset: offset,
+      order: [
+        [sortBy, sortOrder],
+      ],
+    });
 
     // Send all projects as response.
     res.json(projects);
