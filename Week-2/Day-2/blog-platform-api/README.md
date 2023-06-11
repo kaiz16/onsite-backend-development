@@ -13,7 +13,7 @@ This is a Blog Platform API application built using Node.js, Express.js, and Seq
 │   └── users.controller.js         # Users controller
 ├── db                           # Database related files
 │   └── migrations.sql              # Database migrations
-├── index.js                     # Express.js application entry point
+├── index.js                     # App entry point
 ├── models                       # Models
 │   ├── Blog.js                     # Blog model
 │   ├── Comment.js                  # Comment model
@@ -24,7 +24,7 @@ This is a Blog Platform API application built using Node.js, Express.js, and Seq
     └── user.route.js               # Users routes
 ```
 
-### Running the Application
+### Setting up the Application
 
 This application uses MySQL database to store the data. You can use the `migrations.sql` file to create the required database and tables. By default, this app tries to connect to the database on `localhost` with the username `root` and password `sigma12345`. You can change these settings by editing the `config/db.config.js` file.
 
@@ -56,13 +56,9 @@ This application uses MySQL database to store the data. You can use the `migrati
 
    Do whatever you want to do with the application. Perhaps, create a really nice looking frontend for it and integrate it with the API? The sky is the limit!
 
-### Database
+### Testing the Routes
 
-This application uses MySQL database to store the data. You can use the `migrations.sql
-
-#### Routes
-
-Following are the routes available in this application. You can use Postman or Insomnia to test these routes. Alternatively, you may use the `Insomnia_[date].json` file to import the routes into Insomnia.
+Following are the routes available in this application. You can use Postman or Insomnia to test these routes. Alternatively, you may use the `Insomnia_[date].json` file to import the collection into Insomnia and test the routes.
 
 - **GET /users** - Get all users
 - **GET /users/:id** - Get a single user
