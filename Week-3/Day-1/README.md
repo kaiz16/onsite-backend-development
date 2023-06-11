@@ -16,7 +16,8 @@ Task of the Day: Implement the following features in the Task Management System:
   - For users, sorting can be done by `name` and `createdAt` fields in ascending and descending order.
   - For projects, sorting can be done by `title` and `createdAt` fields in ascending and descending order.
   - For tasks, sorting can be done by `title` and `createdAt` fields in ascending and descending order.
-- Hash the password field `/POST /users` endpoint and `/PUT /users/:id` endpoint.
+- Add a check to the `POST /register` endpoint to ensure that the user with the same email does not already exist. If the user already exists, return an error message.
+- Hash the password field `POST /users` endpoint and `PUT /users/:id` endpoint.
 - Add the following authorization rules:
   - Employees can only view projects in which they are involved. This means access to specific tasks that are part of these projects and assigned to them. This applies to both `GET /projects` and `GET /projects/:id` endpoints.
   - Employees can only view tasks that are assigned to them. This applies to both `GET /tasks` and `GET /tasks/:id` endpoints.
