@@ -12,6 +12,7 @@
  4. Run the query.
  */
 CREATE DATABASE blog_platform;
+USE blog_platform;
 
 CREATE TABLE users (
     id INT NOT NULL AUTO_INCREMENT,

@@ -12,6 +12,7 @@
  4. Run the query.
  */
 CREATE DATABASE task_management;
+USE task_management;
 
 CREATE TABLE users (
     id INT NOT NULL AUTO_INCREMENT,
