@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 
-// Load environment variables. See .env file for available variables. 
+// Load environment variables. See .env file for available variables.
 // This should be done before loading variables from process.env
 require("dotenv").config();
 
@@ -15,14 +15,14 @@ Morgan configuration that logs the following:
 - the user agent
 */
 const morganConfig = morgan(function (tokens, req, res) {
-    return [
-        JSON.stringify(req.body),
-        JSON.stringify(req.params),
-        JSON.stringify(req.query),
-        tokens.date(req, res, 'iso'),
-        req.headers['user-agent'],
-    ].join(' ')
-})
+  return [
+    JSON.stringify(req.body),
+    JSON.stringify(req.params),
+    JSON.stringify(req.query),
+    tokens.date(req, res, "iso"),
+    req.headers["user-agent"],
+  ].join(" ");
+});
 
 // Middlewares
 app.use(express.json());
@@ -42,11 +42,11 @@ app.use("/tasks", tasksRoutes);
 // Start the server
 const port = process.env.PORT || 3000;
 app.listen(port, async () => {
-    try {
-        await sequelize.authenticate();
-        console.log("Connection has been established successfully.");
-        console.log(`🚀 Server running on port ${port}`);
-    } catch (error) {
-        console.error("Unable to connect to the database:", error);
-    }
+  try {
+    await sequelize.authenticate();
+    console.log("Connection has been established successfully.");
+    console.log(`🚀 Server running on port ${port}`);
+  } catch (error) {
+    console.error("Unable to connect to the database:", error);
+  }
 });
