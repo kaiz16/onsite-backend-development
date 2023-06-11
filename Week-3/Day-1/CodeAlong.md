@@ -849,6 +849,6 @@ Congratulations! 🎉
 
 Tackling authentication and authorization is no small. It stands as one of the most complex yet vital aspects of web development. Successfully building a complete authentication and authorization system from scratch is indeed a huge accomplishment!
 
-The beauty of the implementation you've just completed is its reusability. The underlying methods and principles of authentication and authorization that you've learned can be transferred and applied to future projects. Of course, the entities and authorization rules may vary from one project to another, the foundational implementation can be reused.
+The beauty of the implementation you've just completed is its reusability. The underlying methods and principles of authentication and authorization that you've learned can be transferred and applied to future projects. Of course, the entities and authorization rules may vary from one project to another, the base implementation can be reused.
 
 So, take a moment to appreciate the knowledge and skills you've gained. This is a major milestone in your journey as a full-stack developer!
