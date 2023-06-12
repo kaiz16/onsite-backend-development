@@ -23,7 +23,7 @@ Therefore, we need to implement a way to check whether the user has the correct 
 
 ### Setting Up the Project
 
-1. Clone the project from [here](https://replit.com/@coding-fundamentals1/Day-35-CORS-Environment-Variables-Logging-Advanced#task-management-api).
+1. Clone the project from [here](https://replit.com/team/coding-fundamentals1/Day-35-CORS-Environment-Variables-Logging-Advanced).
 2. Open up the Beekeeper Studio and connect to the local database.
 3. Run the migrations.sql file to create the database and tables.
 4. Install the dependencies.
