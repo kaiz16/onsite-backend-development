@@ -8,7 +8,7 @@ function verifyToken(req, res, next) {
     // Check if token is undefined
     if (!token) {
       // This will go to the catch block
-      throw new Error("No token provided");
+      throw "No token provided";
     }
 
     // Verify & decode token

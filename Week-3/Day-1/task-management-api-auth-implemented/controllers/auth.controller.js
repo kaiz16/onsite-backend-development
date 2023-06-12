@@ -37,7 +37,7 @@ async function login(req, res) {
     // Validate user input
     if (!email && !password) {
       // This will go to the catch block
-      throw new Error("Email and password are required");
+      throw "Email and password are required";
     }
 
     // Validate if user exist in our database
@@ -48,7 +48,7 @@ async function login(req, res) {
 
     if (!passwordMatch) {
       // This will go to the catch block
-      throw new Error("Invalid login credentials");
+      throw "Invalid login credentials";
     }
 
     // Generate JWT
