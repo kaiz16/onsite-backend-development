@@ -4,7 +4,9 @@ const morgan = require("morgan");
 
 // Load environment variables. See .env file for available variables.
 // This should be done before loading variables from process.env
-require("dotenv").config();
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
 /* 
 Morgan configuration that logs the following:

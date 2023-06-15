@@ -5,7 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "NODE_ENV=development node index.js",
+    "start:prod": "NODE_ENV=production node index.js",
+    "build:dev": "docker build -t task-management-api-dev:1.0 -f Dockerfile.dev .",
+    "build:prod": "docker build -t task-management-api-prod:1.0 -f Dockerfile.prod .",
+    "dev": "docker run -d --network host --name task-management-api-dev task-management-api-dev:1.0",
+    "prod": "docker run -d --network host --name task-management-api-prod task-management-api-prod:1.0",
+    "clean:dev": "docker stop task-management-api-dev && docker rm task-management-api-dev",
+    "clean:prod": "docker stop task-management-api-prod && docker rm task-management-api-prod"
   },
   "keywords": [],
   "author": "",
