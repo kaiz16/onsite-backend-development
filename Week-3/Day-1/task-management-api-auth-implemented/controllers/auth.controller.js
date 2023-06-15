@@ -2,6 +2,15 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/User.js");
 const { hashPassword, comparePassword } = require("../utils/bcrypt.util.js");
 
+async function me(req, res) {
+  try {
+    res.json(req.user);
+  } catch (error) {
+    // If there is any error, send error as response.
+    res.status(500).json({ error: error });
+  }
+}
+
 async function register(req, res) {
   try {
     // Check if the user with the same email already exist
@@ -69,6 +78,7 @@ async function login(req, res) {
 }
 
 module.exports = {
+  me,
   register,
   login,
 };
