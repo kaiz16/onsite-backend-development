@@ -1,0 +1,22 @@
+# Base Environment
+FROM node:16
+# Set the working directory
+WORKDIR /app
+# Copy package files
+COPY package*.json ./
+# Install dependencies
+RUN npm install
+# Copy all other source code files
+COPY . .
+# ENV variables
+ENV DB_NAME task_management
+ENV DB_HOST localhost
+ENV DB_PORT 3306
+ENV DB_USER root
+ENV DB_PASSWORD sigma12345
+ENV PORT 8080
+ENV SECRET_KEY 123456
+# Expose port
+EXPOSE 8080
+# Command to start the application
+CMD ["npm", "start"]

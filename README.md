@@ -152,10 +152,22 @@
 
 **Day 2**:
 
-- Mentor Sharing Topic & Demo: Introduction to containerization and Docker
+- Mentor Sharing Topic & Demo: Introduction to Containerization and Docker
 - Topics To Be Self-Covered: installing docker, Building a Docker image, running a container, configuring networking and storage
-- Task Of The Day: Build a Docker image for the REST API and run it in a container
-- Take Home Tasks: Use docker compose to start a mysql database
+- Task Of The Day: Setup two environments for the Task Management System API: development and production.
+  - The development environment variables should be stored in an `.env.development` file
+  - The production environment variables should be stored in an `.env.production` file.
+  - There should be two Dockerfiles: `Dockerfile.dev` and `Dockerfile.prod`.
+  - The `Dockerfile.dev` should NOT use the `.env.development` file to set the environment variables. Instead, it should use environment variables in the `Dockerfile` itself to pass configuration settings to the application.
+  - The `Dockerfile.prod` should NOT use the `.env.production` file to set the environment variables. Instead, it should use environment variables in the `Dockerfile` itself to pass configuration settings to the application.
+  - No need to use nodemon in Dockerfiles.
+  - Use the `.dockerignore` file to exclude the `node_modules` directory and `.env` files from being copied to the Docker image.
+  - Finally, setup an npm script to build the Docker image for both development and production environments. Eg: `npm run build:dev` and `npm run build:prod`.
+- Take Home Tasks: Use Docker Compose to start a MySQL database
+  - Revision
+    - [Day 5 - Integrating a SQL Database to the REST API (MVC Pattern)](https://docs.google.com/presentation/d/1qDhxYoi6bt6YP7RcaaLrsh6sO0RlaSKT/edit?usp=sharing&ouid=109782457486090270210&rtpof=true&sd=true)
+    - [Day 6 - CORS, Environment Variables, Logging](https://docs.google.com/presentation/d/10fBKsYSsaLMBJaOhC5-j_6AiWjLJGQOn/edit?usp=sharing&ouid=109782457486090270210&rtpof=true&sd=true)
+
 
 **Day 3**:
 
