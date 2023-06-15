@@ -4,7 +4,7 @@
 
 ## Topics To Be Self-Covered:
 
-Self Cover: [](https://app.sigmaschool.co/posts/csdp-backend-development-level-2b-third-party-authentication-tools-auth0)  
+Self Cover: [Advanced Express - Third party Authentication tools](https://app.sigmaschool.co/posts/csdp-backend-development-level-2b-third-party-authentication-tools-auth0)  
 Up until [Assignment #2 - Use Auth0 in ShopApp](https://app.sigmaschool.co/posts/csdp-backend-development-level-2b-assignment-2-use-auth0-in-shopapp)
 
 ## Task Of The Day:
