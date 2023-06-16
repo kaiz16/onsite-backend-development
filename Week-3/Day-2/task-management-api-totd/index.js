@@ -43,8 +43,12 @@ app.use("/projects", projectsRoutes);
 app.use("/tasks", tasksRoutes);
 app.use("/auth", authRoutes);
 
+// Health
+app.get("/", (req, res) => {
+  res.send("Ok: " + process.env.NODE_ENV);
+});
+
 // Start the server
-console.log(process.env.PORT, '_______')
 const port = process.env.PORT || 3000;
 app.listen(port, async () => {
   try {
