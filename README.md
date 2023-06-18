@@ -1,4 +1,4 @@
-### Week 11: Introduction to Backend & Nodejs & NPM + Databases Part 1
+### Week 10: Introduction to Backend & Nodejs & NPM + Databases Part 1
 
 **Day 1**:
 
@@ -55,7 +55,7 @@
   - Posts can be liked and commented by different users.
 - Take Home Tasks: Module Capstone Project ~ BookingApp
 
-### Week 12: Databases Part 2 + Expressjs + Serverless functions (extras/optional)
+### Week 11: Databases Part 2 + ExpressJS + Advanced ExpressJS
 
 **Day 1**:
 
@@ -129,9 +129,9 @@
   - Implement the controllers and routes for the Task Management System.
   - Implement validations where appropriate.
 
-### Week 13: Auth & Deployment - Docker & GCP
+### Week 12: Authentication and Authorization & Using Docker
 
-**Day 1**:
+**Day 1 & 2**:
 
 - Mentor Sharing Topic & Demo: Introduction to authentication and security, implementing auth in ExpressJS
 - Topics To Be Self-Covered: Implementing user authentication and authorization using Passport.js - i& understand how hashing works in the background
@@ -150,7 +150,7 @@
     - Send an email to the user when a new user is created.
     - Implement password reset feature. When a user forgets their password, they can request a unique code to be sent to their email. The user can then use the code to reset their password.
 
-**Day 2**:
+**Day 3**:
 
 - Mentor Sharing Topic & Demo: Introduction to Containerization and Docker
 - Topics To Be Self-Covered: installing docker, Building a Docker image, running a container, configuring networking and storage
@@ -168,8 +168,32 @@
     - [Day 5 - Integrating a SQL Database to the REST API (MVC Pattern)](https://docs.google.com/presentation/d/1qDhxYoi6bt6YP7RcaaLrsh6sO0RlaSKT/edit?usp=sharing&ouid=109782457486090270210&rtpof=true&sd=true)
     - [Day 6 - CORS, Environment Variables, Logging](https://docs.google.com/presentation/d/10fBKsYSsaLMBJaOhC5-j_6AiWjLJGQOn/edit?usp=sharing&ouid=109782457486090270210&rtpof=true&sd=true)
 
+### Week 13: Email Delivery Service, File Upload and GCP
+**Day 1**
 
-**Day 3**:
+- Mentor Sharing Topic & Demo: Implementing Email Delivery Service
+- Topics To Be Self-Covered: Sending emails with Mailgun in ExpressJS, using Mailgun, Implement forgot password feature by sending reset password link to users with Mailgun
+- Task Of The Day: Deploy the Send an email verification link to the user's email address when they sign up:
+  - By default, all new users should have their email unverified in the database.
+  - When a user signs up, send an email verification link to their email address.
+  - When the user clicks on the email verification link, it should update the user's email to verified in the database.
+- Take Home Tasks: 
+  1. Implement a Notification System:
+      - When a user changes their password, send an email to their email address notifying them that their password has been changed.
+      - When a project is assigned to a manager, send an email to the manager's email address notifying them that a project has been assigned to them.
+      - When a task is assigned to a employee, send an email to the employee's email address notifying them that a task has been assigned to them.
+      - When a task is completed, send an email to the employee's email address and the manager's email address notifying them that the task has been completed.
+  2. Use email templates to send emails to users. Basically, instead of sending plain text emails, you can send emails with HTML content. This will make your emails look more professional. You can find email templates [here](https://www.mailgun.com/resources/tools/email-templates/).
+
+
+**Day 2**
+
+- Mentor Sharing Topic & Demo: Introduction to cloud platforms and GCP
+- Topics To Be Self-Covered: Setting up a GCP account, deploying a Docker container to GCP, configuring load balancing and auto-scaling
+- Task Of The Day: Deploy the Docker container to GCP and configure load balancing and auto-scaling
+
+
+**Day 3**
 
 - Mentor Sharing Topic & Demo: Introduction to cloud platforms and GCP
 - Topics To Be Self-Covered: Setting up a GCP account, deploying a Docker container to GCP, configuring load balancing and auto-scaling
