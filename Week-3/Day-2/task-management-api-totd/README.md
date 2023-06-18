@@ -38,7 +38,8 @@ There are three user roles in the system: admin, manager, and employee.
 │   ├── tasks.controller.js      # Tasks controller
 │   └── users.controller.js         # Users controller
 ├── db                           # Database related files
-│   └── migrations.sql              # Database migrations
+│   ├── migrations.dev.sql          # Database migrations for development
+│   └── migrations.prod.sql         # Database migrations for production
 ├── middlewares                  # Middlewares
 │   └── auth.middleware.js          # Authentication middleware
 ├── index.js                     # Express.js application entry point
@@ -57,7 +58,7 @@ There are three user roles in the system: admin, manager, and employee.
 
 ### Setting up the Application
 
-This application uses MySQL database to store the data. You can use the `migrations.sql` file to create the required database and tables. By default, this app tries to connect to the database on `localhost` with the username `root` and password `sigma12345`. You can change these settings by editing the `config/db.config.js` file.
+This application uses MySQL database to store the data. You can use the `migrations.[stage].sql` file to create the required database and tables. By default, this app tries to connect to the database on `localhost` with the username `root` and password `sigma12345`. You can change these settings by editing the `config/db.config.js` file.
 
 1. Setting up the database
 
@@ -67,7 +68,7 @@ This application uses MySQL database to store the data. You can use the `migrati
 
    Note: you might need to use sudo depending on your platform.
 
-2. Follow the instructions in the `migrations.sql` file to create the database and tables.
+2. Follow the instructions in the `migrations.dev.sql` file & `migrations.prod.sql` to create the database and tables.
 
 3. Install dependencies
 
@@ -93,6 +94,7 @@ Following are the routes available in this application. You can use Postman or I
 
 - **POST /auth/login** - Login
 - **POST /auth/register** - Register
+- **POST /auth/me** - Get current user profile
 <hr>
 
 - **GET /users** - Get all users
