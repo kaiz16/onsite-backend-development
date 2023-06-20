@@ -1,0 +1,31 @@
+{
+  "name": "task-management-api-totd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=development node index.js",
+    "start:prod": "NODE_ENV=production node index.js",
+    "build:dev": "docker build -t task-management-api-dev:1.0 -f Dockerfile.dev .",
+    "build:prod": "docker build -t task-management-api-prod:1.0 -f Dockerfile.prod .",
+    "dev": "docker run -d -p 8080:8080 --name task-management-api-dev task-management-api-dev:1.0",
+    "prod": "docker run -d -p 3000:3000 --name task-management-api-prod task-management-api-prod:1.0",
+    "clean:dev": "docker stop task-management-api-dev && docker rm task-management-api-dev",
+    "clean:prod": "docker stop task-management-api-prod && docker rm task-management-api-prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "form-data": "^4.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "mailgun.js": "^9.1.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.3.3",
+    "sequelize": "^6.32.0"
+  }
+}
