@@ -1,0 +1,30 @@
+# Base Environment
+FROM node:16.0.0-alpine
+
+# Set the working directory
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy all other source code files
+COPY . .
+
+# ENV variables
+ENV NODE_ENV production
+ENV DB_NAME twitter_clone_prod
+# Only for Linux based systems, use host.docker.internal for Windows and Mac based systems
+ENV DB_HOST 172.17.0.1
+ENV DB_PORT 3306
+ENV DB_USER root
+ENV DB_PASSWORD sigma12345
+ENV PORT 8080
+ENV SECRET_KEY 74944dca-1521-4229-8b83-3d4c5283df18
+
+# Expose port
+EXPOSE 8080
+
+CMD ["npm", "run", "start"]
