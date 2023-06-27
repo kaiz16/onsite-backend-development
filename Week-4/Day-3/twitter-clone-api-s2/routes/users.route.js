@@ -4,6 +4,7 @@ const usersController = require("../controllers/users.controller.js");
 
 router.get("/", usersController.getAllUsers);
 router.get("/:id", usersController.getUserById);
+router.get("/:id/tweets", usersController.getUserTweets);
 router.put("/:id", usersController.updateUser);
 router.delete("/:id", usersController.deleteUser);
 
