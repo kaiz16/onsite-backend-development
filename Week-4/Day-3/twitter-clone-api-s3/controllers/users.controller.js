@@ -1,3 +1,4 @@
+const Tweet = require("../models/Tweet.js");
 const User = require("../models/User.js");
 const { hashPassword } = require("../utils/bcrypt.util.js");
 
@@ -97,9 +98,27 @@ async function deleteUser(req, res) {
   }
 }
 
+async function getUserTweets(req, res) {
+  try {
+    // Find all tweets created by the user.
+    const tweets = await Tweet.findAll({
+      where: {
+        createdBy: parseInt(req.params.id),
+      },
+    });
+
+    // Send all tweets as response.
+    res.json(tweets);
+  } catch (error) {
+    // If there is any error, send error as response.
+    res.status(500).json({ error: error });
+  }
+}
+
 module.exports = {
   getAllUsers,
   getUserById,
   updateUser,
   deleteUser,
+  getUserTweets,
 };

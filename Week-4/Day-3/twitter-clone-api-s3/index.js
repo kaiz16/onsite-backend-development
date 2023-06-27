@@ -38,6 +38,7 @@ const followsRoutes = require("./routes/follows.route.js");
 const tweetsRoutes = require("./routes/tweets.route.js");
 const likesRoutes = require("./routes/likes.route.js");
 const repliesRoutes = require("./routes/replies.route.js");
+const feedsRoutes = require("./routes/feeds.route.js");
 
 // Define routes here
 app.use("/auth", authRoutes);
@@ -46,6 +47,7 @@ app.use("/users", followsRoutes);
 app.use("/tweets", tweetsRoutes);
 app.use("/tweets", likesRoutes);
 app.use("/tweets", repliesRoutes);
+app.use("/feeds", feedsRoutes);
 
 // Health
 app.get("/", (req, res) => {
