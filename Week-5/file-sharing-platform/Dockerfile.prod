@@ -1,0 +1,31 @@
+# Base Environment
+FROM node:16.0.0-alpine
+
+# Set the working directory
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy all other source code files
+COPY . .
+
+# ENV variables
+ENV NODE_ENV production
+ENV DB_NAME file_sharing_platform_prod
+ENV DB_HOST twitter-clone-sg-do-user-9570258-0.b.db.ondigitalocean.com
+ENV DB_PORT 25060
+ENV DB_USER doadmin
+ENV DB_PASSWORD AVNS_Ai-wDmYNyl-sZk2--nw
+ENV PORT 8080
+ENV SECRET_KEY 74944dca-1521-4229-8b83-3d4c5283df18
+ENV BUCKET_NAME sigma-file-uploads-prod
+ENV GCP_PROJECT_ID sigma-school-374304
+
+# Expose port
+EXPOSE 8080
+
+CMD ["npm", "run", "start"]
