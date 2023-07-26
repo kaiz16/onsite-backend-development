@@ -10,12 +10,13 @@ RUN npm install
 COPY . .
 # ENV variables
 ENV DB_NAME task_management_prod
-ENV DB_HOST host.docker.internal
-ENV DB_PORT 3306
-ENV DB_USER root
-ENV DB_PASSWORD sigma12345
+ENV DB_HOST gateway01.ap-southeast-1.prod.aws.tidbcloud.com
+ENV DB_PORT 4000
+ENV DB_USER 23oDa4xLohasboU.root
+ENV DB_PASSWORD joFF4W4uQHEutz5v
 ENV PORT 3000
 ENV SECRET_KEY 74944dca-1521-4229-8b83-3d4c5283df18
+ENV TLS true
 # Expose port
 EXPOSE 3000
 # Command to start the application
